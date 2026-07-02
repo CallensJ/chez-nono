@@ -1,4 +1,4 @@
-# Chez Nono — Prototype web immersif
+# Chez Nono: Prototype web immersif
 
 Chez Nono est un projet fictif de site vitrine pour une sandwicherie et bar à bières de quartier.
 

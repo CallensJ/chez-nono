@@ -1,4 +1,10 @@
-/context
-/dist
-/docs
+node_modules/
+dist/
+.env
+.env.local
+.DS_Store
+
+context/
+docs/
 CLAUDE.md
+dev.log
