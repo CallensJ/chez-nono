@@ -1,0 +1,17 @@
+
+> prototype@1.0.0 dev
+> vite
+
+
+  VITE v8.1.0  ready in 870 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+12:01:16 [vite] (client) page reload index.html
+12:02:56 [vite] (client) page reload a-propos.html
+12:05:11 [vite] (client) page reload menu.html
+12:07:03 [vite] (client) page reload evenements.html
+12:08:44 [vite] (client) page reload reservation.html
+12:12:44 [vite] (client) page reload contact.html
+12:13:16 [vite] vite.config.js changed, restarting server...
+12:13:16 [vite] server restarted.

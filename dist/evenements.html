@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Événements — Chez Nono</title>
+        <meta
+            name="description"
+            content="Dégustation bière le jeudi, concert acoustique le vendredi, apéro des voisins le samedi. Les rendez-vous réguliers de Chez Nono, sandwicherie et bar à bières de quartier."
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+      <script type="module" crossorigin src="/assets/main-pwqWXduX.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-BO4sZKWy.css">
+    </head>
+    <body>
+        <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+        <header class="navbar" id="navbar" role="banner">
+            <div
+                class="max-w-7xl mx-auto px-6 flex items-center justify-between"
+                style="height: 72px"
+            >
+                <!-- Logo -->
+                <a
+                    href="/"
+                    aria-label="Chez Nono — Accueil"
+                    class="flex items-baseline gap-2 no-underline group"
+                >
+                    <span
+                        class="font-title text-nono-cream text-xl font-semibold tracking-tight leading-none transition-opacity duration-200 group-hover:opacity-75"
+                    >
+                        Chez Nono
+                    </span>
+                    <span
+                        class="font-accent text-nono-gold text-sm leading-none opacity-70"
+                        >depuis 2019</span
+                    >
+                </a>
+
+                <!-- Desktop nav + CTA -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <nav
+                        class="flex items-center gap-8"
+                        aria-label="Navigation principale"
+                    >
+                        <a
+                            href="a-propos.html"
+                            class="font-body text-nono-cream/75 text-sm tracking-wide hover:text-nono-cream transition-colors duration-200"
+                            >À propos</a
+                        >
+                        <a
+                            href="menu.html"
+                            class="font-body text-nono-cream/75 text-sm tracking-wide hover:text-nono-cream transition-colors duration-200"
+                            >Menu</a
+                        >
+                        <a
+                            href="evenements.html"
+                            aria-current="page"
+                            class="font-body text-nono-cream text-sm tracking-wide hover:text-nono-cream transition-colors duration-200"
+                            >Événements</a
+                        >
+                        <a
+                            href="contact.html"
+                            class="font-body text-nono-cream/75 text-sm tracking-wide hover:text-nono-cream transition-colors duration-200"
+                            >Contact</a
+                        >
+                    </nav>
+                    <a
+                        href="reservation.html"
+                        class="btn-primary"
+                        style="padding: 0.6rem 1.4rem; font-size: 0.85rem"
+                    >
+                        Réserver une table
+                    </a>
+                </div>
+
+                <!-- Hamburger (mobile) -->
+                <button
+                    id="menu-toggle"
+                    class="lg:hidden flex flex-col justify-center items-end gap-1.5 w-10 h-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-nono-amber rounded"
+                    aria-label="Ouvrir le menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <span
+                        class="hamburger-line block h-px bg-nono-cream"
+                        style="width: 24px"
+                    ></span>
+                    <span
+                        class="hamburger-line block h-px bg-nono-cream"
+                        style="width: 24px"
+                    ></span>
+                    <span
+                        class="hamburger-line block h-px bg-nono-cream"
+                        style="width: 16px"
+                    ></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ============================================================
+       MOBILE MENU
+  ============================================================ -->
+        <div
+            id="mobile-menu"
+            class="mobile-menu"
+            role="dialog"
+            aria-label="Menu de navigation"
+            aria-modal="true"
+            aria-hidden="true"
+        >
+            <div class="text-center px-8 w-full">
+                <!-- Brand accent -->
+                <p class="font-accent text-nono-gold text-xl mb-12 opacity-60">
+                    Chez Nono
+                </p>
+
+                <!-- Links -->
+                <nav
+                    class="flex flex-col items-center gap-5"
+                    aria-label="Menu mobile"
+                >
+                    <a
+                        href="a-propos.html"
+                        class="mobile-link font-title text-nono-cream text-4xl sm:text-5xl font-medium leading-tight hover:text-nono-gold transition-colors duration-200"
+                        >À propos</a
+                    >
+                    <a
+                        href="menu.html"
+                        class="mobile-link font-title text-nono-cream text-4xl sm:text-5xl font-medium leading-tight hover:text-nono-gold transition-colors duration-200"
+                        >Menu</a
+                    >
+                    <a
+                        href="evenements.html"
+                        aria-current="page"
+                        class="mobile-link font-title text-nono-gold text-4xl sm:text-5xl font-medium leading-tight hover:text-nono-gold transition-colors duration-200"
+                        >Événements</a
+                    >
+                    <a
+                        href="contact.html"
+                        class="mobile-link font-title text-nono-cream text-4xl sm:text-5xl font-medium leading-tight hover:text-nono-gold transition-colors duration-200"
+                        >Contact</a
+                    >
+                </nav>
+
+                <!-- CTA -->
+                <div class="mt-12">
+                    <a
+                        href="reservation.html"
+                        class="btn-primary mobile-link"
+                        style="padding: 0.85rem 2rem; font-size: 1rem"
+                    >
+                        Réserver une table →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom info -->
+            <div class="absolute bottom-8 left-0 right-0 text-center">
+                <p
+                    class="font-body text-nono-gray text-xs tracking-widest uppercase"
+                >
+                    Ouvert midi et soir · Du lundi au samedi
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+       HERO — Chapitre d'ouverture éditorial (image fixe, pas de slider)
+  ============================================================ -->
+        <section
+            id="hero-evenements"
+            class="relative w-full overflow-hidden"
+            style="height: 80vh; height: 80dvh; min-height: 420px"
+            aria-label="Événements chez Nono"
+        >
+            <div
+                class="absolute inset-0"
+                style="
+                    background-image: url(&quot;/images/hero/homepage-hero-1.webp&quot;);
+                    background-size: cover;
+                    background-position: center;
+                "
+                aria-hidden="true"
+            ></div>
+
+            <!-- Overlay -->
+            <div
+                aria-hidden="true"
+                class="absolute inset-0 z-10"
+                style="
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(30, 30, 32, 0.55) 0%,
+                        rgba(30, 30, 32, 0.4) 45%,
+                        rgba(24, 22, 22, 0.68) 68%,
+                        rgba(20, 19, 21, 0.99) 97%
+                    );
+                "
+            ></div>
+
+            <!-- Grain texture -->
+            <div class="grain-overlay" aria-hidden="true"></div>
+
+            <!-- Content -->
+            <div
+                class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6"
+            >
+                <span
+                    class="hero-label font-accent text-nono-gold block mb-4 md:mb-5"
+                    style="font-size: clamp(1rem, 2.5vw, 1.3rem); opacity: 0"
+                >
+                    La vie du lieu
+                </span>
+
+                <h1
+                    class="hero-title font-title text-nono-cream leading-none tracking-tight"
+                    style="
+                        font-size: clamp(2.4rem, 7.5vw, 5.5rem);
+                        max-width: 18ch;
+                        opacity: 0;
+                    "
+                >
+                    Le quartier a ses rendez-vous.
+                </h1>
+
+                <p
+                    class="hero-subtitle font-body text-nono-cream/70 leading-relaxed mt-5 md:mt-7"
+                    style="
+                        font-size: clamp(0.9rem, 2vw, 1.05rem);
+                        max-width: 46ch;
+                        opacity: 0;
+                    "
+                >
+                    Dégustations, concerts, apéros de voisins. Trois soirs fixes
+                    pour prolonger le comptoir un peu plus tard que d'habitude.
+                </p>
+            </div>
+
+            <!-- Scroll hint (desktop) -->
+            <div
+                class="hero-scroll-hint absolute z-20 hidden md:flex flex-col items-center gap-2"
+                style="bottom: 2rem; right: 2.5rem; opacity: 0"
+                aria-hidden="true"
+            >
+                <span
+                    class="font-body text-nono-cream/45 tracking-widest uppercase"
+                    style="
+                        font-size: 0.6rem;
+                        writing-mode: vertical-rl;
+                        letter-spacing: 0.2em;
+                    "
+                >
+                    Défiler
+                </span>
+                <div
+                    class="w-px bg-gradient-to-b from-nono-cream/45 to-transparent"
+                    style="height: 48px"
+                ></div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       CHAPITRE 01 — LA VIE DU LIEU (manifeste centré, fond sombre)
+  ============================================================ -->
+        <section
+            id="la-vie-du-lieu"
+            class="section-dark relative overflow-hidden"
+            style="padding-block: clamp(6rem, 16vw, 11rem)"
+            aria-labelledby="intro-title"
+        >
+            <div
+                class="section-seam"
+                style="--seam-color: #1e1e20"
+                aria-hidden="true"
+            ></div>
+            <div class="grain-overlay" aria-hidden="true"></div>
+            <div class="amber-glow amber-glow--top" aria-hidden="true"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+                <span
+                    class="chapter-label text-nono-gold/80 mb-10 justify-center"
+                    data-reveal
+                >
+                    01 — La vie du lieu
+                </span>
+
+                <h2
+                    id="intro-title"
+                    class="chapter-title text-nono-cream"
+                    style="font-size: clamp(2rem, 6vw, 4.25rem)"
+                >
+                    <span class="reveal-line-wrap"
+                        ><span class="reveal-line"
+                            >Pas de calendrier d'événements à rallonge,</span
+                        ></span
+                    >
+                    <span class="reveal-line-wrap"
+                        ><span class="reveal-line"
+                            >pas de thème différent chaque semaine,</span
+                        ></span
+                    >
+                    <span class="reveal-line-wrap"
+                        ><span class="reveal-line"
+                            >juste trois rendez-vous</span
+                        ></span
+                    >
+                    <span class="reveal-line-wrap"
+                        ><span class="reveal-line text-nono-amber"
+                            >qu'on tient, chaque fois.</span
+                        ></span
+                    >
+                </h2>
+
+                <p
+                    class="font-body text-nono-cream/60 leading-relaxed mt-10 mx-auto"
+                    style="
+                        font-size: clamp(1rem, 1.5vw, 1.15rem);
+                        max-width: 50ch;
+                    "
+                    data-reveal
+                >
+                    Le jeudi pour la bière, le premier vendredi pour la musique,
+                    le dernier samedi pour les voisins. Le reste du temps, la
+                    porte reste ouverte, pas besoin d'occasion pour passer.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       CHAPITRE 02 — LES RENDEZ-VOUS FIXES (event cards)
+  ============================================================ -->
+        <section
+            id="rendez-vous"
+            class="section-green relative overflow-hidden"
+            style="padding-block: clamp(5rem, 12vw, 9rem)"
+            aria-labelledby="rendez-vous-title"
+        >
+            <div
+                class="section-seam"
+                style="--seam-color: #19191b"
+                aria-hidden="true"
+            ></div>
+            <div class="grain-overlay" aria-hidden="true"></div>
+            <div
+                class="tone-glow"
+                style="
+                    --glow-color: rgba(216, 179, 105, 0.3);
+                    width: 460px;
+                    height: 460px;
+                    bottom: -120px;
+                    left: -120px;
+                "
+                aria-hidden="true"
+            ></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                    <span
+                        class="chapter-label text-nono-gold mb-6 justify-center"
+                        data-reveal
+                        >02 — Les rendez-vous fixes</span
+                    >
+                    <h2
+                        id="rendez-vous-title"
+                        class="chapter-title text-nono-cream"
+                        style="font-size: clamp(1.9rem, 4.5vw, 3.25rem)"
+                        data-reveal
+                    >
+                        Trois soirs, trois ambiances.
+                    </h2>
+                    <p
+                        class="font-body text-nono-cream/70 leading-relaxed mt-6 mx-auto"
+                        style="max-width: 44ch"
+                        data-reveal
+                    >
+                        Pas besoin de réserver, pas de liste à l'entrée. On
+                        garde juste un œil sur le nombre de chaises.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <article class="event-card" data-reveal>
+                        <span class="event-day">Jeudi</span>
+                        <h3 class="font-title text-nono-cream text-2xl mt-3">
+                            Dégustation bière
+                        </h3>
+                        <p
+                            class="font-body text-sm text-nono-cream/65 leading-relaxed mt-3"
+                        >
+                            Trois bières que Nono n'a encore servies à personne
+                            au comptoir, racontées une par une. Douze places,
+                            petite planche offerte.
+                        </p>
+                        <span class="event-tag"
+                            >Tous les jeudis · 19 h · Entrée libre</span
+                        >
+                        <p
+                            class="font-accent text-nono-gold mt-4"
+                            style="font-size: 1rem"
+                        >
+                            On vous garde une place au comptoir.
+                        </p>
+                    </article>
+
+                    <article class="event-card" data-reveal>
+                        <span class="event-day">Vendredi</span>
+                        <h3 class="font-title text-nono-cream text-2xl mt-3">
+                            Concert acoustique
+                        </h3>
+                        <p
+                            class="font-body text-sm text-nono-cream/65 leading-relaxed mt-3"
+                        >
+                            Un musicien du quartier, deux guitares, et la
+                            terrasse qui reprend les refrains un peu faux.
+                            Ambiance feutrée, verre à la main.
+                        </p>
+                        <span class="event-tag"
+                            >1er vendredi du mois · 20 h · Entrée libre</span
+                        >
+                        <p
+                            class="font-accent text-nono-gold mt-4"
+                            style="font-size: 1rem"
+                        >
+                            Amenez qui vous voulez, il reste toujours une
+                            chaise.
+                        </p>
+                    </article>
+
+                    <article class="event-card" data-reveal>
+                        <span class="event-day">Samedi</span>
+                        <h3 class="font-title text-nono-cream text-2xl mt-3">
+                            Apéro des voisins
+                        </h3>
+                        <p
+                            class="font-body text-sm text-nono-cream/65 leading-relaxed mt-3"
+                        >
+                            On sort les grandes tables, vous amenez ceux du
+                            dessus, du dessous, d'à côté. Le genre de soirée où
+                            on repart avec un nouveau numéro.
+                        </p>
+                        <span class="event-tag"
+                            >Dernier samedi du mois · 18 h · Entrée libre</span
+                        >
+                        <p
+                            class="font-accent text-nono-gold mt-4"
+                            style="font-size: 1rem"
+                        >
+                            Ouvert à tous, même à ceux qu'on ne connaît pas
+                            encore.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       CHAPITRE 03 — LA DÉGUSTATION (identité visuelle forte)
+  ============================================================ -->
+        <section
+            id="degustation"
+            class="beer-section relative overflow-hidden"
+            style="padding-block: clamp(6rem, 14vw, 10rem)"
+            aria-labelledby="degustation-title"
+        >
+            <div
+                class="section-seam"
+                style="--seam-color: #23302a"
+                aria-hidden="true"
+            ></div>
+            <div class="grain-overlay" aria-hidden="true"></div>
+            <div class="amber-glow amber-glow--right" aria-hidden="true"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <!-- Text -->
+                    <div class="lg:col-span-6">
+                        <span
+                            class="chapter-label text-nono-gold mb-6"
+                            data-reveal
+                            >03 — Le rendez-vous fort</span
+                        >
+                        <h2
+                            id="degustation-title"
+                            class="chapter-title text-nono-cream"
+                            style="font-size: clamp(2rem, 5vw, 3.75rem)"
+                            data-reveal
+                        >
+                            Le jeudi, la bière raconte<br />une histoire.
+                        </h2>
+                        <p
+                            class="font-body text-nono-cream/70 leading-relaxed mt-6"
+                            style="
+                                font-size: clamp(1rem, 1.4vw, 1.1rem);
+                                max-width: 44ch;
+                            "
+                            data-reveal
+                        >
+                            Chaque semaine, Nono choisit trois bières qu'il ne
+                            vous a pas encore servi(e) au comptoir. juste lui,
+                            une liste griffonnée dans sa poche, et l'envie de
+                            vous surprendre.
+                        </p>
+
+                        <!-- Flight -->
+                        <ul class="tap-list mt-10 flex flex-col" data-reveal>
+                            <li class="tap-row">
+                                <span class="font-title text-nono-cream text-lg"
+                                    >Verre 1</span
+                                >
+                                <span
+                                    class="tap-dots"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="font-body text-nono-gold text-sm"
+                                    >la mise en bouche · légère</span
+                                >
+                            </li>
+                            <li class="tap-row">
+                                <span class="font-title text-nono-cream text-lg"
+                                    >Verre 2</span
+                                >
+                                <span
+                                    class="tap-dots"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="font-body text-nono-gold text-sm"
+                                    >la curieuse · introuvable ailleurs dans le
+                                    quartier</span
+                                >
+                            </li>
+                            <li class="tap-row">
+                                <span class="font-title text-nono-cream text-lg"
+                                    >Verre 3</span
+                                >
+                                <span
+                                    class="tap-dots"
+                                    aria-hidden="true"
+                                ></span>
+                                <span class="font-body text-nono-gold text-sm"
+                                    >la forte tête · celle qu'on garde pour la
+                                    fin</span
+                                >
+                            </li>
+                        </ul>
+
+                        <p
+                            class="font-body text-sm text-nono-cream/55 leading-relaxed mt-6"
+                            data-reveal
+                        >
+                            Douze places, une petite planche pour accompagner,
+                            et Nono qui refait le tour des tables pour raconter
+                            chaque bière. On ne réserve pas les jeudis; on
+                            arrive, et on espère qu'il reste une chaise.
+                        </p>
+
+                        <div
+                            class="flex flex-wrap items-center gap-4 mt-9"
+                            data-reveal
+                        >
+                            <a href="menu.html#bieres" class="btn-primary"
+                                >Voir la carte des bières</a
+                            >
+                            <a href="reservation.html" class="btn-secondary"
+                                >Réserver pour un groupe</a
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="lg:col-span-6">
+                        <div class="relative max-w-md lg:max-w-none mx-auto">
+                            <div
+                                class="img-mask rounded-xl beer-image-frame"
+                                style="aspect-ratio: 4 / 5"
+                                data-reveal="mask"
+                            >
+                                <div
+                                    class="img-mask-inner"
+                                    data-parallax="0.12"
+                                    style="
+                                        background-image: url(&quot;/images/evenements/ambiance.webp&quot;);
+                                    "
+                                    role="img"
+                                    aria-label="Le comptoir à bières de Chez Nono dans la lumière ambrée, un soir de dégustation"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       CHAPITRE 04 — UNE SOIRÉE COMME LES AUTRES (ambiance + preuve)
+  ============================================================ -->
+        <section
+            id="ambiance-soiree"
+            class="section-dusk relative overflow-hidden"
+            style="padding-block: clamp(5rem, 12vw, 9rem)"
+            aria-labelledby="ambiance-soiree-title"
+        >
+            <div
+                class="section-seam"
+                style="--seam-color: #16100b"
+                aria-hidden="true"
+            ></div>
+            <div class="grain-overlay" aria-hidden="true"></div>
+            <div
+                class="tone-glow"
+                style="
+                    --glow-color: rgba(216, 179, 105, 0.32);
+                    width: 500px;
+                    height: 400px;
+                    top: -100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                "
+                aria-hidden="true"
+            ></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                    <span
+                        class="chapter-label text-nono-gold mb-6 justify-center"
+                        data-reveal
+                        >04 — Une soirée comme les autres</span
+                    >
+                    <h2
+                        id="ambiance-soiree-title"
+                        class="chapter-title text-nono-cream"
+                        style="font-size: clamp(1.9rem, 4.5vw, 3.25rem)"
+                        data-reveal
+                    >
+                        Du bois, de l'ambre,<br />un peu plus de bruit que
+                        d'habitude.
+                    </h2>
+                    <p
+                        class="font-accent text-nono-gold mt-6"
+                        style="font-size: clamp(1.3rem, 3vw, 1.8rem)"
+                        data-reveal
+                    >
+                        « On vient pour la bière, on reste parce que quelqu'un
+                        raconte une histoire. »
+                    </p>
+                </div>
+
+                <!-- Mosaic -->
+                <div class="gallery-grid">
+                    <div
+                        class="img-mask img-shadow gallery-tile gallery-tile--tall"
+                        data-reveal="mask"
+                    >
+                        <div
+                            class="img-mask-inner"
+                            data-parallax="0.1"
+                            style="
+                                background-image: url(&quot;/images/hero/homepage-hero-1.webp&quot;);
+                            "
+                            role="img"
+                            aria-label="La terrasse de Chez Nono un soir de dégustation"
+                        ></div>
+                    </div>
+                    <div
+                        class="img-mask img-shadow gallery-tile"
+                        data-reveal="mask"
+                    >
+                        <div
+                            class="img-mask-inner"
+                            style="
+                                background-image: url(&quot;/images/hero/homepage-hero-2.webp&quot;);
+                            "
+                            role="img"
+                            aria-label="Le comptoir à bières dans la lumière du soir"
+                        ></div>
+                    </div>
+                    <div
+                        class="img-mask img-shadow gallery-tile"
+                        data-reveal="mask"
+                    >
+                        <div
+                            class="img-mask-inner"
+                            style="
+                                background-image: url(&quot;/images/hero/homepage-hero-3.webp&quot;);
+                            "
+                            role="img"
+                            aria-label="Une planche partagée pendant la dégustation"
+                        ></div>
+                    </div>
+                </div>
+
+                <!-- Preuve -->
+                <div class="max-w-md mx-auto mt-12 md:mt-16">
+                    <figure class="testimonial" data-reveal>
+                        <div class="testimonial-stars" aria-label="5 sur 5">
+                            ★★★★★
+                        </div>
+                        <blockquote
+                            class="font-body text-nono-cream/85 leading-relaxed mt-4"
+                        >
+                            « Le jeudi, je ne regarde plus mon agenda. Je sais
+                            juste que je finis chez Nono, un verre à la main. »
+                        </blockquote>
+                        <figcaption
+                            class="font-body text-sm text-nono-gold mt-5"
+                        >
+                            Julien — habitué du jeudi soir
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       CTA FINAL (poussez la porte)
+  ============================================================ -->
+        <section
+            id="cta-final"
+            class="relative overflow-hidden"
+            style="min-height: 70vh; display: flex; align-items: center"
+            aria-labelledby="cta-title"
+        >
+            <div
+                class="cta-bg"
+                aria-hidden="true"
+                style="
+                    background-image: url(&quot;/images/hero/homepage-hero-2.webp&quot;);
+                "
+            ></div>
+            <div class="cta-overlay" aria-hidden="true"></div>
+            <div
+                class="section-seam"
+                style="--seam-color: #1e1712"
+                aria-hidden="true"
+            ></div>
+            <div class="grain-overlay" aria-hidden="true"></div>
+
+            <div
+                class="relative z-10 w-full max-w-3xl mx-auto px-6 text-center"
+                style="padding-block: clamp(5rem, 12vw, 8rem)"
+            >
+                <span
+                    class="font-accent text-nono-gold block mb-5"
+                    style="font-size: clamp(1.3rem, 3vw, 1.8rem)"
+                    data-reveal
+                    >On vous attend un soir de semaine</span
+                >
+                <h2
+                    id="cta-title"
+                    class="chapter-title text-nono-cream"
+                    style="font-size: clamp(2.2rem, 6vw, 4.5rem)"
+                    data-reveal
+                >
+                    Poussez la porte, un peu plus tard que d'habitude.
+                </h2>
+                <p
+                    class="font-body text-nono-cream/75 leading-relaxed mt-6 mx-auto"
+                    style="
+                        font-size: clamp(1rem, 1.5vw, 1.15rem);
+                        max-width: 44ch;
+                    "
+                    data-reveal
+                >
+                    Pas de réservation nécessaire pour les soirées — sauf si
+                    vous venez à plus de six. Dans ce cas, on vous garde une
+                    table.
+                </p>
+                <div
+                    class="flex flex-wrap items-center justify-center gap-4 mt-9"
+                    data-reveal
+                >
+                    <a href="reservation.html" class="btn-primary"
+                        >Réserver une table</a
+                    >
+                    <a href="menu.html" class="btn-secondary">Voir la carte</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+        <footer
+            class="footer relative overflow-hidden"
+            style="padding-block: clamp(4rem, 8vw, 5.5rem) 2.5rem"
+            role="contentinfo"
+        >
+            <div
+                class="section-seam"
+                style="--seam-color: #1e1e20"
+                aria-hidden="true"
+            ></div>
+            <div class="max-w-7xl mx-auto px-6">
+                <div
+                    class="grid gap-12 md:gap-8 md:grid-cols-12 pb-12 border-b border-nono-cream/10"
+                >
+                    <!-- Brand -->
+                    <div class="md:col-span-5">
+                        <div class="flex items-baseline gap-2">
+                            <span
+                                class="font-title text-nono-cream text-2xl font-semibold tracking-tight"
+                                >Chez Nono</span
+                            >
+                            <span class="font-accent text-nono-gold text-base"
+                                >depuis 2019</span
+                            >
+                        </div>
+                        <p
+                            class="font-body text-nono-cream/60 leading-relaxed mt-4"
+                            style="max-width: 36ch"
+                        >
+                            Sandwicherie & bar à bières de quartier. Pain chaud,
+                            bière fraîche, et le temps de s'asseoir.
+                        </p>
+                        <a
+                            href="reservation.html"
+                            class="btn-primary mt-7"
+                            style="padding: 0.6rem 1.4rem; font-size: 0.85rem"
+                            >Réserver une table</a
+                        >
+                    </div>
+
+                    <!-- Nav -->
+                    <nav
+                        class="md:col-span-3"
+                        aria-label="Navigation pied de page"
+                    >
+                        <p class="footer-heading">Le menu</p>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a href="a-propos.html" class="footer-link"
+                                    >À propos</a
+                                >
+                            </li>
+                            <li>
+                                <a href="menu.html" class="footer-link"
+                                    >La carte</a
+                                >
+                            </li>
+                            <li>
+                                <a href="evenements.html" class="footer-link"
+                                    >Événements</a
+                                >
+                            </li>
+                            <li>
+                                <a href="contact.html" class="footer-link"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Infos -->
+                    <div class="md:col-span-4">
+                        <p class="footer-heading">Passez nous voir</p>
+                        <address
+                            class="not-italic font-body text-nono-cream/65 leading-relaxed"
+                        >
+                            12 rue du Comptoir<br />
+                            75011 Paris<br />
+                            <a
+                                href="tel:+33100000000"
+                                class="footer-link inline-block mt-2"
+                                >01 00 00 00 00</a
+                            >
+                        </address>
+                        <p
+                            class="font-body text-nono-cream/65 leading-relaxed mt-4"
+                        >
+                            <span class="text-nono-cream/85">Midi & soir</span
+                            ><br />
+                            Du lundi au samedi · 11 h 30 – 23 h
+                        </p>
+
+                        <!-- Social -->
+                        <div class="flex items-center gap-3 mt-5">
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="Instagram"
+                                >Instagram</a
+                            >
+                            <span class="text-nono-cream/25">·</span>
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="Facebook"
+                                >Facebook</a
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-7"
+                >
+                    <p class="font-body text-nono-cream/40 text-xs">
+                        © 2026 Chez Nono. Prototype, design, développement par
+                        <a
+                            href="https://johanwebstudio.fr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="underline hover:text-nono-cream/70 transition-colors"
+                            >johanwebstudio.fr</a
+                        >. Tous les bons moments réservés.
+                    </p>
+                    <p class="font-accent text-nono-gold/60 text-base">
+                        À tout à l'heure.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ============================================================
+       MAIN JS
+  ============================================================ -->
+    </body>
+</html>

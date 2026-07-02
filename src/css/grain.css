@@ -1,0 +1,20 @@
+/* ============================================================
+   Hero grain texture — tactile/artisanal accent (Authenticity Rules)
+   Pure CSS, no image asset. Static (no animation) to stay calm.
+
+   To remove this effect entirely:
+   1. delete the `@import "./grain.css";` line in input.css
+   2. remove the `.grain-overlay` div from the hero markup
+   ============================================================ */
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  background-image: url("/images/textures/grain-noise.png");
+}
